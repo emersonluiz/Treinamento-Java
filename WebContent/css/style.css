@@ -1,0 +1,23 @@
+p{
+	font-weight: bold;
+	color: blue;
+}
+.td{
+	background: #1F1F1F;
+	color: #FFFFFF;
+	padding: 3px 10px;
+}
+.td_odd{
+	background: #CCCCCC;
+	padding: 3px 10px;
+}
+.td_even{
+	background: #E8E8E8;
+	padding: 3px 10px;
+}
+select{
+	width: 200px;
+}
+.titulo{
+	background: #CCCCCC;
+}

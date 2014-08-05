@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="ISO-8859-1">
+<title>Servico</title>
+<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+<script type="text/javascript" src="../scripts/lib/angular.min.js"></script>
+<script type="text/javascript" src="scripts/scripts_list.js?version=1.0"></script>
+</head>
+<body ng-controller="controller">
+	<p>Listagem de Servico</p>
+	<table>
+		<tr>
+			<td class="td">Id</td>
+			<td class="td">Nome</td>
+			<td class="td">Acao</td>
+		<tr>
+		<tr ng-repeat="item in items">
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'">{{item.id}}</td>
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'">{{item.nome}}</td>
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'"><a href="servico_edit.jsp?id={{item.id}}">[ Edit ]</a> <a href="#" ng-click="del(item.id)">[ Delete ]</a></td>
+		</tr>
+	</table>
+	<a href="../index.html">[ Home ]</a> <a href="servico_new.html">[ New ]</a>
+</body>
+</html>

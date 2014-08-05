@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nomeacao</title>
+<link type="text/css" rel="stylesheet" href="../css/style.css"/>
+<script type="text/javascript" src="../scripts/lib/angular.min.js"></script>
+<script type="text/javascript" src="scripts/scripts_list.js?version=1.0"></script>
+</head>
+<body ng-controller="controller">
+	<p>Listagem de Nomeacao</p>
+	<table>
+		<tr>
+			<td class="td">Id</td>
+			<td class="td">Numero</td>
+			<td class="td">Cliente</td>
+			<td class="td">Acao</td>
+		<tr>
+		<tr ng-repeat="item in items">
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'">{{item.id}}</td>
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'">{{item.numero}}</td>
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'">{{item.cliente.nome}}</td>
+			<td ng-class-odd="'td_odd'" ng-class-even="'td_even'"><a href="nomeacao_edit.jsp?id={{item.id}}">[ Edit ]</a> <a href="#" ng-click="del(item.id)">[ Delete ]</a></td>
+		</tr>
+	</table>
+	<a href="../index.html">[ Home ]</a> <a href="nomeacao_new.html">[ New ]</a>
+</body>
+</html>
